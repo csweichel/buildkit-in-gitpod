@@ -4,8 +4,8 @@ image:
 tasks:
   - before: sudo buildkitd
   - before: sudo sh -c "while [ ! -e /run/buildkit/buildkitd.sock ]; do sleep 1; done"
-    command: sudo buildctl build \
-      --frontend=dockerfile.v0 \
-      --local context=. \
-      --local dockerfile=demo.Dockerfile
+    command: sudo buildctl build
+      --frontend=dockerfile.v0
+      --local context=.
+      --local dockerfile=.
     openMode: split-right
